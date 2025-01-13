@@ -1,0 +1,62 @@
+<script setup>
+import { RouterLink } from 'vue-router';
+</script>
+
+<template>
+    <div class="text-center">
+        <RouterLink to="/" class="group-title">Stars DC</RouterLink>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <RouterLink to="/" class="nav-link">Inicio</RouterLink>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <RouterLink to="/galeria" class="nav-link">Galería</RouterLink>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <RouterLink to="/presentaciones" class="nav-link">Presentaciones</RouterLink>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <RouterLink to="/historia" class="nav-link">Historia</RouterLink>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <RouterLink to="/ingresar" class="nav-link">Ingresar</RouterLink>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+
+<style scoped>
+* {
+    background: #090a13;
+    margin: 0;
+    text-decoration: none;
+}
+.group-title{
+    font-size: 40px;
+    font-family: 'Amerika Signature',serif;
+    color: #fff;
+    text-shadow: 0 0 10px #9ef1ff;
+}
+a.nav-link {
+    font-size: 13px;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s ease-in-out;
+}
+a.nav-link:hover {
+    background: #fff;
+    color: #090a13;
+    box-shadow: 0 0 10px #9ef1ff;
+}
+</style>
