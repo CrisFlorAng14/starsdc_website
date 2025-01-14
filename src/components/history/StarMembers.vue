@@ -39,7 +39,7 @@ export default {
                 color_2="377aff"
                 instagram="itzz_.h00nie"
                 class="mx-3"
-                image="Paloma.jpg"
+                image="Hoonie.jpg"
             />
             <Member 
                 name="Paloma"
@@ -56,6 +56,62 @@ export default {
                 class="mx-3"
                 image="Paloma.jpg"
             />
+            <Member 
+                name="Ari"
+                birthday="29 de septiembre"
+                fav_colors="Morado"
+                fav_song="Standing Next To You"
+                fav_groups="BTS y Twice"
+                bias="Taehyung"
+                description="Me caracterizo por ser tener un corazoncito de pollo, ser amante de los michitos y ser una linda persona."
+                color_1="8e27fc" 
+                color_2="a95cfb"
+                instagram="hdzscar"
+                class="mx-3"
+                image="Ari.jpg"
+            />
+            <Member 
+                name="Azu"
+                birthday="13 de enero"
+                fav_colors="Morado"
+                fav_song="Moonstruck; Not For Sale"
+                fav_groups="Enhypen, BTS y Ab6ix"
+                bias="Heeseung"
+                description="Me caracterizo por ser alegre, amante de las flores y muy divertida."
+                color_1="8e27fc" 
+                color_2="a95cfb"
+                instagram="heezuny"
+                class="mx-3"
+                image="Azu.jpg"
+            />
+            <Member 
+                name="Shey"
+                birthday="10 de julio"
+                fav_colors="Rosa, Rojo y Morado"
+                fav_song="Mikrokosmos"
+                fav_groups="BTS, Stray kids, Twice"
+                bias="Jimin, Han, Dahyun"
+                description="Me caracterizo por ser alegre, cariñosa, amante de los gatos y amo bailar."
+                color_1="f85dfd" 
+                color_2="ff5c5c"
+                instagram="sheylagaagui"
+                class="mx-3"
+                image="Shey.jpg"
+            />
+            <Member 
+                name="Haneul"
+                birthday="08 de marzo"
+                fav_colors="Azul Zafiro y Lila"
+                fav_song="Mikrokosmos"
+                fav_groups="Super Junior, ASTRO, Gfriend, NCT"
+                bias="Kyuhyun/Johnny/D.O"
+                description="Amo la música, si no escucho algo me muero, otaku bestie por excelencia y adoro ir a cafeterías bonitas."
+                color_1="2554c7" 
+                color_2="4b80dc"
+                instagram="jandi.exe"
+                class="mx-3"
+                image="Handy.jpg"
+            />
         </div>
     </div>
 </template>
@@ -66,7 +122,7 @@ export default {
 }
 .stars {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
 }
 .mx-3 {
     padding: 10px;

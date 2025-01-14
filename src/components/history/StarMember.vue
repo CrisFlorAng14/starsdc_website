@@ -176,6 +176,9 @@ export default {
 .member-container {
     width: 20rem;
     height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-radius: 15px;
 }

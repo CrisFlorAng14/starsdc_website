@@ -13,20 +13,17 @@ import { RouterLink } from 'vue-router';
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-2">
+                    <li class="nav-item mx-2 py-2 py-lg-0">
                         <RouterLink to="/" class="nav-link">Inicio</RouterLink>
                     </li>
-                    <li class="nav-item mx-2">
+                    <li class="nav-item mx-2 py-2 py-lg-0">
                         <RouterLink to="/galeria" class="nav-link">Galería</RouterLink>
                     </li>
-                    <li class="nav-item mx-2">
-                        <RouterLink to="/presentaciones" class="nav-link">Presentaciones</RouterLink>
-                    </li>
-                    <li class="nav-item mx-2">
+                    <li class="nav-item mx-2 py-2 py-lg-0">
                         <RouterLink to="/historia" class="nav-link">Historia</RouterLink>
                     </li>
-                    <li class="nav-item mx-2">
-                        <RouterLink to="/ingresar" class="nav-link">Ingresar</RouterLink>
+                    <li class="nav-item mx-2 py-2 py-lg-0">
+                        <RouterLink to="/presentaciones" class="nav-link">Presentaciones</RouterLink>
                     </li>
                 </ul>
             </div>

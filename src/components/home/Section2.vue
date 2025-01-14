@@ -14,13 +14,13 @@ import { RouterLink } from 'vue-router';
             <div class="col-6">
                 <div class="card-container" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="card">
-                        <img src="" alt="">
+                        <img src="../../../public/media/images/members/Hoonie.jpg" alt="">
                     </div>
                     <div class="card">
-                        <img src="" alt="">
+                        <img src="../../../public/media/images/members/Jenn.jpg" alt="">
                     </div>
                     <div class="card">
-                        <img src="" alt="">
+                        <img src="../../../public/media/images/members/Azu.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ a:hover {
     width: 10rem;
     height: 14rem;
     background-color: #f2f2f2;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -73,10 +73,12 @@ a:hover {
     font-weight: bold;
     transition: transform 0.3s;
     overflow: hidden;
+    box-shadow: 0 0 10px #000;
 }
 
 .card img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
