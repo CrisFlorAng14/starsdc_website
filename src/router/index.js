@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/historia',
       name: 'historia',
       component: () => import('../views/HistoryView.vue'),
+    },
+    {
+      path: '/galeria',
+      name: 'galeria',
+      component: () => import('../views/GalleryView.vue'),
     }
   ],
   scrollBehavior(to, from, savedPosition){
