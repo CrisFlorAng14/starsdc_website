@@ -2,13 +2,13 @@
 import Section1 from '@/components/home/Section1.vue';
 import Section2 from '@/components/home/Section2.vue';
 import Section3 from '@/components/home/Section3.vue';
-import FooterPage from '@/components/FooterPage.vue';
+
 export default {
     components: {
         Section1,
         Section2,
         Section3,
-        FooterPage,
+        
     },
     mounted() {
         const phrases = document.querySelectorAll('.phrase');
@@ -60,8 +60,7 @@ export default {
   <Section2 />
   <!-- Sección 3 -->
   <Section3 />
-  <!-- Footer -->
-  <FooterPage />
+  
 </template>
 
 <style scoped>

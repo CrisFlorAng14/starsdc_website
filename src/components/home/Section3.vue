@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="container-fluid py-5" id="section-3">
+    <div class="container-fluid py-5 px-5" id="section-3">
         <div class="row">
             <div class="col-8 s-text" data-aos="zoom-in-right" data-aos-duration="1000">
                 <h1>Síguenos en nuestras redes sociales</h1>

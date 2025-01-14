@@ -5,7 +5,7 @@
 <template>
     <footer class="container-fluid" id="footer">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 d-flex align-items-center justify-content-center">
                 <h3 class="text-center" id="group-title">
                     Stars DC
                 </h3>

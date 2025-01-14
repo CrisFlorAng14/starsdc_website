@@ -3,13 +3,13 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <div class="container-fluid py-5 my-5" id="section-2">
+    <div class="container-fluid py-5 my-5 px-5" id="section-2">
         <div class="row">
             <div class="col-6 s-text" data-aos="flip-left" data-aos-duration="1000">
                 <h1>De fanáticos a estrellas</h1>
                 <p>Conoce más acerca de nuestro grupo...</p>
 
-                <RouterLink to="" class="btn">Historia</RouterLink>
+                <RouterLink to="/historia" class="btn" @click="scrollSection">Historia</RouterLink>
             </div>
             <div class="col-6">
                 <div class="card-container" data-aos="zoom-in" data-aos-duration="1000">

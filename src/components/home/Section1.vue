@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <div class="container-fluid" id="section-1">
+    <div class="container-fluid px-5" id="section-1">
         <div class="row">
             <!-- Sección con iconos -->
             <div class="col-6">
