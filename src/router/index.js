@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/galeria',
       name: 'galeria',
       component: () => import('../views/GalleryView.vue'),
+    },
+    {
+      path: '/presentaciones',
+      name: 'presentaciones',
+      component: () => import('../views/PresentationsView.vue'),
     }
   ],
   scrollBehavior(to, from, savedPosition){

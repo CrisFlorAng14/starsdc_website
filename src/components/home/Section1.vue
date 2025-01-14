@@ -37,7 +37,7 @@ import { RouterLink } from 'vue-router';
                     Mira nuestras presentaciones
                 </p>
 
-                <RouterLink to="" class="btn btn-light mt-3">Nuestros proyectos</RouterLink>
+                <RouterLink to="/presentaciones" class="btn btn-light mt-3">Nuestros proyectos</RouterLink>
             </div>
         </div>
     </div>    

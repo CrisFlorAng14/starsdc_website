@@ -12,19 +12,19 @@
             <div class="col-4">
                 <div class="social-container">
                     <div class="social-media" data-aos="flip-up" data-aos-duration="1000">
-                        <a href="https://www.tiktok.com/@starsdancecover">
+                        <a href="https://www.tiktok.com/@starsdancecover" target="_blank">
                             <font-awesome-icon :icon="['fab', 'tiktok']" />
                             Tik Tok
                         </a>
                     </div>
                     <div class="social-media" data-aos="flip-up" data-aos-duration="1000">
-                        <a href="https://www.youtube.com/@StarsDanceCover">
+                        <a href="https://www.youtube.com/@StarsDanceCover" target="_blank">
                             <font-awesome-icon :icon="['fab', 'youtube']" />
                             YouTube
                         </a>
                     </div>
                     <div class="social-media" data-aos="flip-up" data-aos-duration="1000">
-                        <a href="https://www.instagram.com/stars.d.c">
+                        <a href="https://www.instagram.com/stars.d.c" target="_blank">
                             <font-awesome-icon :icon="['fab', 'instagram']" />
                             Instagram
                         </a>

@@ -101,7 +101,7 @@ export default {
                                         <li>{{ description }}</li>
                                     </ul>
                                     <div class="d-flex mx-3 social-member">
-                                        <a :href="'https://www.instagram.com/' + instagram" :style="{ '--hover-color': '#' + color_1 }">
+                                        <a :href="'https://www.instagram.com/' + instagram" :style="{ '--hover-color': '#' + color_1 }" target="_blank">
                                             <font-awesome-icon :icon="['fab', 'instagram']" />
                                         </a>
                                     </div>

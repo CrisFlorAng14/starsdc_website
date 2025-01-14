@@ -13,13 +13,13 @@
             <div class="col-6 mt-3">
                 <h4>Nuestras redes</h4>
                 <div class="social-media">
-                    <a href="https://www.youtube.com/@StarsDanceCover" class="youtube-link">
+                    <a href="https://www.youtube.com/@StarsDanceCover" class="youtube-link" target="_blank">
                         <font-awesome-icon :icon="['fab', 'youtube']" class="f-icon"/>
                     </a>
-                    <a href="https://www.tiktok.com/@starsdancecover" class="tiktok-link mx-4">
+                    <a href="https://www.tiktok.com/@starsdancecover" class="tiktok-link mx-4" target="_blank">
                         <font-awesome-icon :icon="['fab', 'tiktok']" class="f-icon"/>
                     </a>
-                    <a href="https://www.instagram.com/stars.d.c/" class="instagram-link">
+                    <a href="https://www.instagram.com/stars.d.c/" class="instagram-link" target="_blank">
                         <font-awesome-icon :icon="['fab', 'instagram']" class="f-icon"/>
                     </a>
                 </div>
