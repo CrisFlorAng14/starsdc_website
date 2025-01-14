@@ -5,18 +5,19 @@ export default {
             isModalVisible: false,
             modalImage: '', // Contendrá la URL de la imagen seleccionada
             images: [
-                '../../public/media/images/members/Jenn.jpg',
-                '../../public/media/images/starsdc_smart.jpg',
-                '../../public/media/images/members/Azu.jpg',
-                '../../public/media/images/members/Hoonie.jpg',
-                '../../public/media/images/starsdc_borntobe.jpg',
-                '../../public/media/images/starsdc_sugarrushride.jpg',
-                '../../public/media/images/starsdc_chkchkboom.jpg',
-                '../../public/media/images/members/Shey.jpg',
-                '../../public/media/images/members/Paloma_002.jpg',
-                '../../public/media/images/members/Handy.jpg',
-                '../../public/media/images/members/Ari.jpg',
+                '/media/images/members/Jenn.jpg',
+                '/media/images/starsdc_smart.jpg',
+                '/media/images/members/Azu.jpg',
+                '/media/images/members/Hoonie.jpg',
+                '/media/images/starsdc_borntobe.jpg',
+                '/media/images/starsdc_sugarrushride.jpg',
+                '/media/images/starsdc_chkchkboom.jpg',
+                '/media/images/members/Shey.jpg',
+                '/media/images/members/Paloma_002.jpg',
+                '/media/images/members/Handy.jpg',
+                '/media/images/members/Ari.jpg',
             ],
+
         };
     },
     methods: {
