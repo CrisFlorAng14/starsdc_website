@@ -4,31 +4,31 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <div class="container-fluid px-5" id="section-1">
+    <div class="container-fluid px-lg-5 px-3 pt-lg-0 pt-5" id="section-1">
         <div class="row">
             <!-- Sección con iconos -->
-            <div class="col-6">
+            <div class="col-12 col-lg-6 s-icons">
                 <div class="row">
-                    <div class="col-6 text-center py-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-6 text-center py-1 py-lg-5" data-aos="fade-up" data-aos-duration="1000">
                         <font-awesome-icon :icon="['fas', 'icons']" class="f-icon mb-3"/>
                         <h5>Energía y presencia escénica</h5>
                     </div>
-                    <div class="col-6 text-center py-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="col-6 text-center py-1 py-lg-5" data-aos="fade-up" data-aos-duration="1000">
                         <font-awesome-icon :icon="['fas', 'trophy']" class="f-icon mb-3"/>
                         <h5>Bailando y ganando en cada evento</h5>
                     </div>
-                    <div class="col-6 text-center py-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-6 text-center py-1 py-lg-5" data-aos="fade-up" data-aos-duration="1000">
                         <font-awesome-icon :icon="['fas', 'lightbulb']" class="f-icon mb-3"/>
                         <h5>Ideas creativas y estilo propio al bailar</h5>
                     </div>
-                    <div class="col-6 text-center py-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="col-6 text-center py-1 py-lg-5" data-aos="fade-up" data-aos-duration="1000">
                         <font-awesome-icon :icon="['fas', 'users']" class="f-icon mb-3"/>
                         <h5>Siendo estrellas trabajando en equipo</h5>
                     </div>
                 </div>
             </div>
             <!-- Sección de texto -->
-            <div class="col-6 text-end mt-5 s-text" data-aos="fade-right" data-aos-duration="1000">
+            <div class="col-12 col-lg-6 text-end mt-5 s-text" data-aos="fade-right" data-aos-duration="1000">
                 <h1>Bailar y brillar es lo nuestro</h1>
                 <br>
                 <p>
@@ -37,7 +37,9 @@ import { RouterLink } from 'vue-router';
                     Mira nuestras presentaciones
                 </p>
 
-                <RouterLink to="/presentaciones" class="btn btn-light mt-3">Nuestros proyectos</RouterLink>
+                <div class="btn-container">
+                    <RouterLink to="/presentaciones" class="btn btn-light mt-3">Nuestros proyectos</RouterLink>
+                </div>
             </div>
         </div>
     </div>    
@@ -69,5 +71,34 @@ import { RouterLink } from 'vue-router';
 .btn:hover {
     box-shadow: 0 0 10px #9ef1ff;
 }
-
+/* En celulares pequeños */
+@media (max-width: 768px) {
+    .f-icon {
+        font-size: 2.5rem;
+    }
+    h5 {
+        font-size: 0.9rem;
+    }
+    .s-text h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .s-text p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .s-icons {
+        order: 2;
+        margin-top: 2rem;
+    }
+    .s-text {
+        order: 1;
+    }
+    
+}
 </style>

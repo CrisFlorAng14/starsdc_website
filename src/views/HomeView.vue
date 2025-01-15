@@ -41,13 +41,13 @@ export default {
       </div>
       <div class="text-center py-3" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <p class="phrase">Brillando con cada paso</p>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <p class="phrase">Estrellas del K-pop</p>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-lg-4">
             <p class="phrase">Iluminando el escenario</p>
           </div>
         </div>
@@ -123,5 +123,24 @@ export default {
 }
 .active {
   text-shadow: 0 0 10px #9ef1ff;
+}
+/* En celulares pequeños */
+@media (max-width: 768px) {
+  #home {
+    height: 65vh;
+  }
+  .video-container {
+
+    height: 50vh;
+  }
+  .text-content h1 {
+    font-size: 2rem;
+  }
+  .text-content h4 {
+    font-size: 1.1rem;
+  }
+  .phrase {
+    font-size: 1rem;
+  }
 }
 </style>

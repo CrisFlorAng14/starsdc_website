@@ -5,11 +5,11 @@
 <template>
     <div class="container-fluid py-5 px-5" id="section-3">
         <div class="row">
-            <div class="col-8 s-text" data-aos="zoom-in-right" data-aos-duration="1000">
+            <div class="col-12 col-lg-8 s-text" data-aos="zoom-in-right" data-aos-duration="1000">
                 <h1>Síguenos en nuestras redes sociales</h1>
                 <p>Ayudanos a crecer en el mundo digital</p>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 <div class="social-container">
                     <div class="social-media" data-aos="flip-up" data-aos-duration="1000">
                         <a href="https://www.tiktok.com/@starsdancecover" target="_blank">
@@ -93,5 +93,23 @@
 }
 .social-media a:hover {
     text-shadow: 0 0 5px #DEDEDE;
+}
+/* En celulares pequeños */
+@media (max-width: 768px){
+    .s-text {
+        text-align: center;
+    }
+    .s-text h1 {
+        font-size: 2.5rem;
+    }
+    .s-text p {
+        font-size: 1.1rem;
+    }
+    .social-container {
+        place-items: center;
+    }
+    .social-media a{
+        font-size: 1.3rem;
+    }
 }
 </style>

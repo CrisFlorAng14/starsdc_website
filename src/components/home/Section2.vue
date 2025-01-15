@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <div class="container-fluid py-5 my-5 px-5" id="section-2">
+    <div class="container-fluid py-0 py-lg-5 my-5 px-5" id="section-2">
         <div class="row">
             <div class="col-6 s-text" data-aos="flip-left" data-aos-duration="1000">
                 <h1>De fanáticos a estrellas</h1>
@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router';
 
                 <RouterLink to="/historia" class="btn" @click="scrollSection">Historia</RouterLink>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <div class="card-container" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="card">
                         <img src="../../../public/media/images/members/Hoonie.jpg" alt="">
@@ -105,5 +105,64 @@ a:hover {
 .card:nth-child(3):hover {
     transform: rotate(15deg) translate(120px) scale(1.3);
     z-index: 3;
+}
+/* En celulares pequeños */
+@media (max-width: 768px) {
+    /* Contenedor de sección 2 */
+    #section-2 {
+        height: 50vh;
+    }
+    /* Texto de la sección */
+    .s-text {
+        width: 100%;
+    }
+    .s-text h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .s-text p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .s-text a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Cartas */
+    .card-container {
+        margin-top: 3.5rem;    
+        width: 100%; 
+        height: 100%;
+    }
+    .card {
+        width: 6rem;
+        height: 8rem;
+    }
+    .card:nth-child(1) {
+    transform: rotate(-15deg) translateX(-60px);
+    z-index: 1;
+    }
+    .card:nth-child(1):hover {
+        transform: rotate(-15deg) translate(-60px) scale(1.3);
+        z-index: 3;
+    }
+    .card:nth-child(2) {
+        transform: rotate(0deg);
+        z-index: 2;
+    }
+    .card:nth-child(2):hover {
+        transform: rotate(0deg) scale(1.3);
+        z-index: 2
+    }
+    .card:nth-child(3) {
+        transform: rotate(15deg) translateX(60px);
+        z-index: 1;
+    }
+    .card:nth-child(3):hover {
+        transform: rotate(15deg) translate(60px) scale(1.3);
+        z-index: 3;
+    }
 }
 </style>
