@@ -163,7 +163,7 @@ export default {
 
 @media (max-width: 600px) {
     .gallery-masonry {
-        column-count: 1; /* Una columna en pantallas extra pequeñas */
+        column-count: 2; /* Una columna en pantallas extra pequeñas */
     }
 }
 
