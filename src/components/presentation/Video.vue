@@ -24,4 +24,11 @@ export default {
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
 </style>

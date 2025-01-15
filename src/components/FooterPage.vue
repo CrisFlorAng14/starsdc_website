@@ -5,12 +5,12 @@
 <template>
     <footer class="container-fluid" id="footer">
         <div class="row">
-            <div class="col-6 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
                 <h3 class="text-center" id="group-title">
                     Stars DC
                 </h3>
             </div>
-            <div class="col-6 mt-3">
+            <div class="col-12 col-lg-6 mt-3">
                 <h4>Nuestras redes</h4>
                 <div class="social-media">
                     <a href="https://www.youtube.com/@StarsDanceCover" class="youtube-link" target="_blank">
@@ -66,5 +66,22 @@ h4,p {
     background: linear-gradient(10deg, #ff00cc, #ffaa70);
     -webkit-background-clip: text;
     filter: drop-shadow(0 0 10px #ff00cc) drop-shadow(0 0 10px #ffaa70);
+}
+@media (max-width: 768px){
+    #group-title {
+        font-size: 3rem;
+    }
+    h4,p{
+        text-align: center;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 12px;
+    }
+    .social-media {
+        text-align: center;
+    }
 }
 </style>

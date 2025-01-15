@@ -155,7 +155,7 @@ export default {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .gallery-masonry {
         column-count: 2; /* Dos columnas en pantallas pequeñas */
     }
@@ -166,4 +166,5 @@ export default {
         column-count: 1; /* Una columna en pantallas extra pequeñas */
     }
 }
+
 </style>

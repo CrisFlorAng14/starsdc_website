@@ -130,7 +130,6 @@ export default {
     height: 65vh;
   }
   .video-container {
-
     height: 50vh;
   }
   .text-content h1 {

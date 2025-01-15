@@ -79,7 +79,7 @@ export default {
                         <div class="content">
                             <div class="row">
                                 <!-- Imagen de perfil -->
-                                <div class="col-5">
+                                <div class="col-lg-5 col-12">
                                     <div class="member-container">
                                         <img 
                                             :src="'/media/images/members/' + image" 
@@ -88,7 +88,7 @@ export default {
                                     </div>
                                 </div>
                                 <!-- Información -->
-                                <div class="col-7">
+                                <div class="col-lg-7 col-12 mt-3 mt-lg-0">
                                     <div class="name-container">
                                         <h4>{{ name }}</h4>
                                     </div>
@@ -219,5 +219,18 @@ li {
     filter: drop-shadow(0 0 8px var(--hover-color, #ffffff));
     transform: scale(1.1);
 }
-
+@media (max-width: 768px) {
+    .img-container {
+        width: 7rem;
+        height: 7rem;
+    }
+    .member-container {
+        width: 15rem;
+        height: 15rem;
+        margin-left: 1rem;
+    }
+    .starshower-container {
+        transform: translateX(-5rem) translateY(10rem);
+    }
+}
 </style>

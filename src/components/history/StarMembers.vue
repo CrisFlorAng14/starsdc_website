@@ -127,4 +127,12 @@ export default {
 .mx-3 {
     padding: 10px;
 }
+@media (max-width: 768px) {
+    .stars {
+        grid-template-columns: repeat(auto-fit,minmax(7rem,1fr));
+    }
+    #members-title {
+        text-align: center;
+    }
+}
 </style>

@@ -56,4 +56,12 @@ a.nav-link:hover {
     color: #090a13;
     box-shadow: 0 0 10px #9ef1ff;
 }
+@media (max-width: 768px) {
+    .group-title {
+        position: absolute;
+        font-size: 35px;
+        transform: translateX(-2.5rem);
+        z-index: 500;
+    }
+}
 </style>
