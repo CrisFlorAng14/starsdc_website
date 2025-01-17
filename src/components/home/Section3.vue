@@ -1,14 +1,18 @@
-<script setup>
-
-</script>
-
+<!-- 
+    COMPONENTE: Section3
+    Muestra la sección 3 de la página de INICIO
+    - Enlaces a redes sociales
+-->
 <template>
+    <!-- Contenedor de la sección 3 -->
     <div class="container-fluid py-5 px-5" id="section-3">
         <div class="row">
+            <!-- Títulos y texto -->
             <div class="col-12 col-lg-8 s-text" data-aos="zoom-in-right" data-aos-duration="1000">
                 <h1>Síguenos en nuestras redes sociales</h1>
                 <p>Ayudanos a crecer en el mundo digital</p>
             </div>
+            <!-- Redes sociales -->
             <div class="col-12 col-lg-4">
                 <div class="social-container">
                     <div class="social-media" data-aos="flip-up" data-aos-duration="1000">
@@ -36,6 +40,7 @@
 </template>
 
 <style scoped>
+/* Estilos generales */
 #section-3 {
     background: #07070b;
 }
@@ -96,6 +101,7 @@
 }
 /* En celulares pequeños */
 @media (max-width: 768px){
+    /* Texto */
     .s-text {
         text-align: center;
     }
@@ -105,6 +111,7 @@
     .s-text p {
         font-size: 1.1rem;
     }
+    /* Redes sociales */
     .social-container {
         place-items: center;
     }

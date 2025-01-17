@@ -1,9 +1,11 @@
 <script>
 export default {
+    // Devolución de objetos
     data() {
         return {
-            isModalVisible: false,
-            modalImage: '', // Contendrá la URL de la imagen seleccionada
+            isModalVisible: false, // Verificar si el modal está visible
+            modalImage: '', // URL de la imagen seleccionada
+            // Arreglo de imagenes
             images: [
                 '/media/images/members/Jenn.jpg',
                 '/media/images/starsdc_smart.jpg',
@@ -20,25 +22,33 @@ export default {
 
         };
     },
+    // Métodos
     methods: {
+        /**
+         * Función para mostrar imagen en el modal
+         */
         showImageModal(imageSrc) {
-            this.modalImage = imageSrc;
-            this.isModalVisible = true;
+            this.modalImage = imageSrc; // Asignar la URL de la imagen
+            this.isModalVisible = true; // Mostrar modal
         },
+        /**
+         * Función para cerrar el modal
+         */
         closeModal() {
-            this.isModalVisible = false;
-            this.modalImage = '';
+            this.isModalVisible = false; // Ocultar modal
+            this.modalImage = ''; // Limpiar URL de la imagen
         },
     },
 };
 </script>
 
 <template>
+    <!-- Contenedor de GALERÍA -->
     <div id="gallery" class="px-4 py-3">
         <div class="container-fluid">
-            <!-- Contenedor de la galería con estilo de Masonry -->
+            <!-- Contenedor de galería estilo Masonry -->
             <div class="gallery-masonry">
-                <!-- Recorre el arreglo de imágenes dinámicamente -->
+                <!-- Recorrido de arreglo de imágenes dinámicamente -->
                 <div class="gallery-images" v-for="(image, index) in images" :key="index">
                     <div class="img-container" @click="showImageModal(image)">
                         <img :src="image" alt="Image {{ index + 1 }}" class="img-content">
@@ -51,6 +61,7 @@ export default {
         <div v-if="isModalVisible" class="image-modal" @click="closeModal">
             <!-- Botón para cerrar -->
             <button class="close-button" @click="closeModal">✕</button>
+            <!-- Contenedor de la imagen modal -->
             <div class="modal-img-container">
                 <img :src="modalImage" alt="Selected Image" class="modal-content">
             </div>
@@ -59,6 +70,7 @@ export default {
 </template>
 
 <style scoped>
+/* Estilos de contenedor principal GALERÍA */
 #gallery {
     height: 100%;
     background: #090a13;
@@ -66,7 +78,7 @@ export default {
 
 /* Contenedor de Masonry */
 .gallery-masonry {
-    column-count: 4; /* Cuatro columnas en pantallas grandes */
+    column-count: 5; /* Columnas en pantallas grandes */
     column-gap: 1rem; /* Espacio entre las columnas */
     width: 100%;
 }
@@ -76,7 +88,7 @@ export default {
     break-inside: avoid; /* Evita que las imágenes se dividan entre columnas */
     margin-bottom: 1rem;
 }
-
+/* Estilos para imagen individual */
 .img-container {
     width: 100%;
     border: solid 1px #fff;
@@ -84,19 +96,17 @@ export default {
     overflow: hidden;
     transition: 0.3s ease-in-out;
 }
-
 .img-content {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Las imágenes cubren completamente su contenedor */
+    object-fit: cover;
 }
-
 .img-container:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-/* Modal estilos */
+/* Estilos del modal */
 .image-modal {
     position: fixed;
     top: 0;
@@ -109,13 +119,11 @@ export default {
     align-items: center;
     z-index: 1000;
 }
-
 .modal-img-container {
     width: auto;
     height: 80vh;
     overflow: hidden;
 }
-
 .modal-content {
     width: 100%;
     height: 100%;
@@ -123,7 +131,7 @@ export default {
     border-radius: 10px;
 }
 
-/* Estilo del botón para cerrar */
+/* Estilos del botón para cerrar */
 .close-button {
     position: absolute;
     top: 20px;
@@ -143,7 +151,6 @@ export default {
     z-index: 5;
     transition: background 0.3s ease;
 }
-
 .close-button:hover {
     background: rgba(255, 255, 255, 1);
 }
@@ -161,10 +168,5 @@ export default {
     }
 }
 
-@media (max-width: 600px) {
-    .gallery-masonry {
-        column-count: 2; /* Una columna en pantallas extra pequeñas */
-    }
-}
 
 </style>

@@ -1,15 +1,20 @@
-<script setup>
-
-</script>
-
+<!-- 
+    COMPONENTE: FooterPage
+    Muestra el pie de pagina
+    - Nombre del grupo
+    - Enlace a redes sociales
+-->
 <template>
+    <!-- Contenedor pie de página -->
     <footer class="container-fluid" id="footer">
         <div class="row">
+            <!-- Nombre del grupo -->
             <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
                 <h3 class="text-center" id="group-title">
                     Stars DC
                 </h3>
             </div>
+            <!-- Redes sociales -->
             <div class="col-12 col-lg-6 mt-3">
                 <h4>Nuestras redes</h4>
                 <div class="social-media">
@@ -30,6 +35,7 @@
 </template>
 
 <style scoped>
+/* Estilos para FOOTER */
 #footer {
     background: #090a13;
 }
@@ -67,6 +73,7 @@ h4,p {
     -webkit-background-clip: text;
     filter: drop-shadow(0 0 10px #ff00cc) drop-shadow(0 0 10px #ffaa70);
 }
+/* Estilos para dispositivos pequeños */
 @media (max-width: 768px){
     #group-title {
         font-size: 3rem;

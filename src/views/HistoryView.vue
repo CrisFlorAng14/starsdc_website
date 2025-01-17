@@ -1,8 +1,10 @@
 <template>
+    <!-- Contenedor principal de HISTORIA -->
     <div id="history">
         <div class="container-fluid" id="history-id">
             <div class="row">
                 <div class="col-3 px-lg-5 px-4 s-text">
+                    <!-- Logo del grupo -->
                     <div data-aos="zoom-in" data-aos-duration="1000">
                         <img src="../../public/media/icons/Logo.png" alt="" class="img-logo">
                     </div>
@@ -12,13 +14,13 @@
                             y el baile en el género de K-POP. El grupo de dance cover se crea a mediados
                             del 2024 por la líder e integrante Jenny Saldaña "Jenn".
                             
-                            <!-- Este contenido siempre se ve, pero en dispositivos grandes solo se muestra parte -->
+                            <!-- Texto contraido en dispositivos pequeños y se muestra siempre en dispositivos pequeños -->
                             <span v-bind:class="{'d-none d-sm-inline': !isExpanded}">
                                 Debutando con cinco integrantes con la canción "SMART - LE SSERAFIM" en agosto
                                 del 2024. Actualmente el grupo está creciendo considerablemente, incluyendo a nuevos integrantes, 
                                 participando en concursos, eventos y colaborando con otros grupos de dance cover.
                             </span>
-                            <!-- En dispositivos pequeños, se muestra un botón para expandir el texto -->
+                            <!-- Botón para expandir texto en dispositivos pequeños -->
                             <button 
                                 v-if="isMobile" 
                                 class="btn btn-link p-0 ms-1"
@@ -27,16 +29,18 @@
                                 {{ isExpanded ? 'Ver menos' : 'Ver más' }}
                             </button>
                         </p>
-                        <button class="btn btn-light" @click="scrollSection"><strong>Conoce a las estrellas</strong></button>
+                        <!-- Botón para ir a la sección de miembros -->
+                        <button class="btn btn-light mt-0 mt-lg-3" @click="scrollSection"><strong>Conoce a las estrellas</strong></button>
                     </div>
                 </div>
+                <!-- Imagen de portada -->
                 <div class="col-12 col-lg-9 img-container px-0 mx-0">
                     <img src="../../public/media/images/starsdc_chkchkboom.jpg" alt="" class="img-cover">
                 </div>
             </div>
-            <!-- Miembros -->
         </div>
     </div>
+    <!-- Sección de Miembros del grupo -->
     <Members />
 </template>
 
@@ -44,46 +48,61 @@
 import Members from '@/components/history/StarMembers.vue';
 
 export default {
+    // Componentes utilizados
     components: {
         Members,
     },
+    // Devolución de objeto con propiedades
     data() {
         return {
-            isExpanded: false,  // Determina si el contenido adicional está visible
-            isMobile: false,    // Determina si el dispositivo es móvil
+            isExpanded: false,  // Contenido adicional visible?
+            isMobile: false,    // Dispositivo móvil?
         };
     },
     mounted() {
-        this.checkScreenSize(); // Verifica el tamaño de la pantalla cuando se monta el componente
-        window.addEventListener('resize', this.checkScreenSize); // Verifica el tamaño de la pantalla al redimensionar
+        this.checkScreenSize(); // Verificar el tamaño de la pantalla
+        window.addEventListener('resize', this.checkScreenSize); // Verificar el tamaño de la pantalla al redimensionar
     },
-    beforeDestroy() {
+    beforeUnmount() {
         window.removeEventListener('resize', this.checkScreenSize); // Limpiar el evento de resize cuando el componente se destruya
     },
+    // Métodos
     methods: {
+        /**
+         * Función para verificar el tamaño de la pantalla
+         */
         checkScreenSize() {
-            this.isMobile = window.innerWidth <= 768; // Consideramos que es móvil si el ancho de la ventana es <= 768px
+            this.isMobile = window.innerWidth <= 768;
         },
+        /**
+         * Función para realizar scroll al elemento seleccionado
+         */
         scrollSection() {
+            // Se obtiene el elemento con ID 'members-title'
             const section = document.getElementById('members-title');
+            // Si existe el elmento realiza scroll suave
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });
             }
         },
+        /**
+         * Función para expandir o contraer el texto
+         */
         toggleContent() {
-            this.isExpanded = !this.isExpanded; // Alterna entre expandir y contraer el contenido
+            this.isExpanded = !this.isExpanded;
         },
     },
 };
 </script>
 
 <style scoped>
+/* Contenedor principal HISTORIA */
 #history {
     height: 83.5vh;
     background: #090a13;
 }
 
-/* Estilos de historia y logo */
+/* Estilos de texto de historia y logo */
 .img-logo {
     transform: translateX(9rem) translateY(1rem);
     width: 40vh;
@@ -140,15 +159,18 @@ export default {
     mask-repeat: no-repeat, no-repeat;
 }
 
+/* Estilos para dispositivos pequeños */
 @media (max-width: 768px) {
+    /* Principal HISTORIA */
     #history {
         height: 70vh;
     }
+    /* Portada */
     .img-container {
         width: 100%;
         height: auto;
+        height: 22vh;
     }
-
     .img-cover {
         -webkit-mask-image: 
             linear-gradient(to bottom, black 0%, transparent 100%);
@@ -156,29 +178,22 @@ export default {
             linear-gradient(to bottom, black 30%, transparent 100%);
         order: 2;
     }
-
-    .s-text {
-        order: 1;
-    }
-
-    .img-container {
-        height: 22vh;
-    }
-
+    /* Logo */
     .img-logo {
         transform: translateY(-3rem);
         width: 20vh;
     }
-
+    /* Texto de historia */
+    .s-text {
+        order: 1;
+    }
     .text-container {
         width: 90vw;
     }
-
     .text-content {
         font-size: 12px;
         transform: translateY(-2.5rem);
     }
-
     .btn-link {
         font-size: 12px;
         text-decoration: none;

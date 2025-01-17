@@ -3,6 +3,7 @@ import Section1 from '@/components/home/Section1.vue';
 import Section2 from '@/components/home/Section2.vue';
 import Section3 from '@/components/home/Section3.vue';
 
+// Definción de componentes utilizados en la vista
 export default {
     components: {
         Section1,
@@ -11,20 +12,29 @@ export default {
         
     },
     mounted() {
+        // Definción de constantes con la clase 'phrase'
         const phrases = document.querySelectorAll('.phrase');
+        // DEfinción de índice
         let currentIndex = 0;
-
+        /**
+         * Función para actualizar la animación de 'phrase'
+         */
         function updateActivePhrase() {
-            phrases.forEach(p => p.classList.remove('active'));
-            phrases[currentIndex].classList.add('active');
-            currentIndex = (currentIndex + 1) % phrases.length;
+          // Recorrido del índice para remover la animación
+          phrases.forEach(p => p.classList.remove('active'));
+          // Activar la animación en el índice
+          phrases[currentIndex].classList.add('active');
+          // Asegura alcance el máximo regrese a 0 (al inicio)
+          currentIndex = (currentIndex + 1) % phrases.length;
         }
+        // Intervalo de tiempo para ejecutar la función
         setInterval(updateActivePhrase, 2000);
     }
 }
 </script>
 
 <template>
+  <!-- Contenedor principal de INICIO -->
   <div id="home">
     <!-- Contenedor del video -->
     <div class="video-container">
@@ -36,9 +46,11 @@ export default {
     <!-- Contenedor del texto -->
     <div class="text-content">
       <div data-aos="fade-down" data-aos-duration="1000">
+        <!-- Títulos -->
         <h1>K-POP DANCE COVER</h1>
         <h4>El brillo del K-pop comienza aquí</h4>
       </div>
+      <!-- Frases -->
       <div class="text-center py-3" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
           <div class="col-12 col-lg-4">
@@ -124,20 +136,24 @@ export default {
 .active {
   text-shadow: 0 0 10px #9ef1ff;
 }
-/* En celulares pequeños */
+/* Estilos en celulares pequeños */
 @media (max-width: 768px) {
+  /* Principal INICIO */
   #home {
     height: 65vh;
   }
+  /* Video */
   .video-container {
     height: 50vh;
   }
+  /* Títulos */
   .text-content h1 {
     font-size: 2rem;
   }
   .text-content h4 {
     font-size: 1.1rem;
   }
+  /* Frases */
   .phrase {
     font-size: 1rem;
   }

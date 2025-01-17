@@ -1,9 +1,15 @@
+<!-- 
+    COMPONENTE: Section1
+    Muestra la sección 1 de la página de INICIO
+    - Caracteristicas
+    - Enlace a proyectos
+-->
 <script setup>
 import { RouterLink } from 'vue-router';
-
 </script>
 
 <template>
+    <!-- Contenedor de la sección 1 -->
     <div class="container-fluid px-lg-5 px-3 pt-lg-0 pt-5" id="section-1">
         <div class="row">
             <!-- Sección con iconos -->
@@ -36,7 +42,7 @@ import { RouterLink } from 'vue-router';
                     <br> 
                     Mira nuestras presentaciones
                 </p>
-
+                <!-- Enlace a la vista PRESENTACIONES -->
                 <div class="btn-container">
                     <RouterLink to="/presentaciones" class="btn btn-light mt-3">Nuestros proyectos</RouterLink>
                 </div>
@@ -46,6 +52,7 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped>
+/* Estilos generales */
 #section-1 {
     background: #07070b;
 }
@@ -64,6 +71,7 @@ import { RouterLink } from 'vue-router';
 .s-text p {
     font-size: 1.5rem;
 }
+/* Estilo de botón */
 .btn {
     transition: 0.3s ease-in-out;
     font-weight: bold;
@@ -71,14 +79,9 @@ import { RouterLink } from 'vue-router';
 .btn:hover {
     box-shadow: 0 0 10px #9ef1ff;
 }
-/* En celulares pequeños */
+/* En dispositivos pequeños */
 @media (max-width: 768px) {
-    .f-icon {
-        font-size: 2.5rem;
-    }
-    h5 {
-        font-size: 0.9rem;
-    }
+    /* Texto */
     .s-text h1 {
         font-size: 2.5rem;
         text-align: center;
@@ -87,18 +90,25 @@ import { RouterLink } from 'vue-router';
         font-size: 1.1rem;
         text-align: center;
     }
+    .s-text {
+        order: 1;
+    }
+    h5 {
+        font-size: 0.9rem;
+    }
+    /* Iconos */
+    .s-icons {
+        order: 2;
+        margin-top: 2rem;
+    }
+    .f-icon {
+        font-size: 2.5rem;
+    }
+    /* Boton */
     .btn-container {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .s-icons {
-        order: 2;
-        margin-top: 2rem;
-    }
-    .s-text {
-        order: 1;
-    }
-    
 }
 </style>

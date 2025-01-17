@@ -1,12 +1,15 @@
 <script>
 import Presentation from '@/components/presentation/Video.vue';
 export default {
+    // Componentes utilizados
     components: {
         Presentation,
     }    
 }
 </script>
+
 <template>
+    <!-- Contenedor principal PRESENTACIONES -->
     <div id="presentations" class="container-fluid px-lg-5 py-4 px-3">
         <div class="row">
             <div class="col-6 col-lg-4 py-2 py-lg-0">
@@ -23,6 +26,7 @@ export default {
 </template>
 
 <style scoped>
+/* Estilos de presentaciones */
 #presentations {
     height: 83.5vh; 
     background: #07070b;

@@ -1,16 +1,25 @@
+<!-- 
+    COMPONENTE: Section2
+    Muestra la sección 2 de la página de INICIO
+    - Algunos miembros
+    - Enlace a historia
+-->
 <script setup>
 import { RouterLink } from 'vue-router';
 </script>
 
 <template>
+    <!-- Contenedor de la sección 2 -->
     <div class="container-fluid py-0 py-lg-5 my-5 px-5" id="section-2">
         <div class="row">
+            <!-- Títulos y texto -->
             <div class="col-6 s-text" data-aos="flip-left" data-aos-duration="1000">
                 <h1>De fanáticos a estrellas</h1>
                 <p>Conoce más acerca de nuestro grupo...</p>
-
+                <!-- Enlace a la vista HISTORIA -->
                 <RouterLink to="/historia" class="btn" @click="scrollSection">Historia</RouterLink>
             </div>
+            <!-- Cartas de miembros del grupo -->
             <div class="col-12 col-lg-6">
                 <div class="card-container" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="card">
@@ -29,6 +38,7 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped>
+/* Estilo de texto */
 .s-text h1{
     font-size: 4.5rem;
     font-weight: bold;
@@ -106,9 +116,9 @@ a:hover {
     transform: rotate(15deg) translate(120px) scale(1.3);
     z-index: 3;
 }
-/* En celulares pequeños */
+/* En dispositivos pequeños */
 @media (max-width: 768px) {
-    /* Contenedor de sección 2 */
+    /* Sección 2 */
     #section-2 {
         height: 50vh;
     }

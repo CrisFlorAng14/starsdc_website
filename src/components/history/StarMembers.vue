@@ -1,6 +1,11 @@
+<!-- 
+    COMPONENTE: StarMembers
+    Muestra el listado de los TODOS los miembros del grupo
+-->
 <script>
 import Member from './StarMember.vue';
 export default {
+    // Componentes
     components: {
         Member,
     }
@@ -8,8 +13,10 @@ export default {
 </script>
 
 <template>
+    <!-- Contenedor para todos los miembros del grupo -->
     <div id="members" class="container-fluid px-5 py-5">
         <h2 class="mb-4 text-white" id="members-title">Conoce a las estrellas</h2>
+        <!-- Miembros de STARS DC -->
         <div class="stars">
             <Member 
                 name="Jenn"
@@ -117,9 +124,11 @@ export default {
 </template>
 
 <style scoped>
+/* Estilos generales */
 #members {
     background: #090a13;
 }
+/* Estilos para acomodar cada miembro */
 .stars {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
@@ -127,6 +136,7 @@ export default {
 .mx-3 {
     padding: 10px;
 }
+/* Estilos para dispositivos pequeños */
 @media (max-width: 768px) {
     .stars {
         grid-template-columns: repeat(auto-fit,minmax(7rem,1fr));

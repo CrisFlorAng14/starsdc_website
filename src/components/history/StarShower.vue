@@ -1,4 +1,9 @@
+<!-- 
+    COMPONENTE: StarShower
+    Muestra la animación de lluvia de estrellas
+-->
 <template>
+    <!-- Contenedor de lluvia de estrellas -->
     <div class="night" :style="customStyles">
         <div class="star"></div>
         <div class="star"></div>
@@ -35,6 +40,7 @@ export default {
 </script>
 
 <style scoped>
+/* Estilos de fondo */
 .night {
     position: relative;
     width: 100%;
@@ -42,6 +48,7 @@ export default {
     transform: rotateZ(40deg) translateY(-10rem);
     z-index: -1000;
 }
+/* Estilos de estrellas */
 .star {
     position: absolute;
     left: 50%;
@@ -52,25 +59,6 @@ export default {
     border-radius: 999px;
     filter: drop-shadow(0 0 6px var(--secondary-color));
     animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
-}
-@keyframes tail {
-    0% {
-        width: 0px;
-    }
-    30% {
-        width: 100px;
-    }
-    100% {
-        width: 0;
-    }
-}
-@keyframes falling {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(300px);
-    }
 }
 .star::before,
 .star::after {
@@ -85,6 +73,29 @@ export default {
     transform: translateX(50%) rotateZ(45deg);
     animation: shinning 3s ease-in-out infinite;
 }
+/* Animación de camino de estrella */
+@keyframes tail {
+    0% {
+        width: 0px;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+/* Animación de caída de estrellas */
+@keyframes falling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+/* Animación de brillo */
 @keyframes shinning {
     0% {
         width: 0px;
@@ -96,6 +107,7 @@ export default {
         width: 0;
     }
 }
+/* Estilos y animación para cada estrella */
 .star::after{
     transform: translateX(50%) rotateZ(-45deg);
 }
@@ -163,5 +175,4 @@ export default {
 .star:nth-child(8)::before, .star:nth-child(8)::after{
     animation-delay: 3s;
 }
-/* Añade aquí los estilos para las estrellas específicas */
 </style>

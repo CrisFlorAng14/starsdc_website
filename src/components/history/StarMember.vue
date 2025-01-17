@@ -5,9 +5,11 @@
 <script>
 import StarShower from './StarShower.vue';
 export default {
+    // Componentes
     components: {
         StarShower,
     },
+    // Propiedades que se reciben
     props: {
         name: {
             type: String,
@@ -47,6 +49,7 @@ export default {
 </script>
 
 <template>
+    <!-- Contenedor de la sección 'Member' -->
     <div id="member">
         <!-- Contenedor de imagen del miembro del grupo -->
         <div id="member" :style="{ '--primary-color': '#' + color_1 }">
@@ -100,6 +103,7 @@ export default {
                                         <li><strong>Bias:</strong> {{ bias }}</li>
                                         <li>{{ description }}</li>
                                     </ul>
+                                    <!-- Red social -->
                                     <div class="d-flex mx-3 social-member">
                                         <a :href="'https://www.instagram.com/' + instagram" :style="{ '--hover-color': '#' + color_1 }" target="_blank">
                                             <font-awesome-icon :icon="['fab', 'instagram']" />
@@ -219,7 +223,9 @@ li {
     filter: drop-shadow(0 0 8px var(--hover-color, #ffffff));
     transform: scale(1.1);
 }
+/* Estilos para dispositivos pequeños */
 @media (max-width: 768px) {
+    /* Imagen */
     .img-container {
         width: 7rem;
         height: 7rem;
@@ -229,6 +235,7 @@ li {
         height: 15rem;
         margin-left: 1rem;
     }
+    /* Lluvia de estrellas */
     .starshower-container {
         transform: translateX(-5rem) translateY(10rem);
     }
